@@ -1,7 +1,6 @@
 import { Response } from "express";
 import { AuthRequest } from "#middleware/auth";
 import { TicketModel } from "#models/Ticket";
-import { UserModel } from "#models/User";
 export const getExpiringTickets = async (req: AuthRequest, res: Response) => {
   try {
     let tickets;
@@ -19,7 +18,7 @@ export const getExpiringTickets = async (req: AuthRequest, res: Response) => {
         const expiration = new Date(ticket.expiration_date);
         const diffHours = (expiration.getTime() - now.getTime()) / 1000 / 3600;
 
-        if (diffHours <= 48 && ticket.status !== "expired") {
+        if (diffHours <= 48 && ticket.status == "active" ) {
           expiringTickets.push(ticket);
         }
       }
