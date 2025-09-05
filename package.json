@@ -1,0 +1,49 @@
+{
+    "name": "ticket-management-api",
+    "version": "1.0.0",
+    "main": "dist/server.js",
+    "scripts": {
+        "dev": "nodemon src/server.ts",
+        "build": "tsc",
+        "start": "node dist/server.js",
+        "migrate": "dotenv -e .env -- cross-env SUPABASE_ACCESS_TOKEN=$SUPABASE_SERVICE_ROLE_KEY npx supabase db push"
+    },
+    "dependencies": {
+        "@supabase/supabase-js": "^2.57.0",
+        "@types/multer": "^2.0.0",
+        "bcryptjs": "^2.4.3",
+        "cors": "^2.8.5",
+        "dotenv": "^16.3.1",
+        "express": "^4.18.2",
+        "jsonwebtoken": "^9.0.0",
+        "module-alias": "^2.2.3",
+        "multer": "^2.0.2",
+        "node-cron": "^4.2.1",
+        "pg": "^8.11.1",
+        "postgres": "^3.4.7"
+    },
+    "devDependencies": {
+        "@types/bcryptjs": "^2.4.2",
+        "@types/cors": "^2.8.17",
+        "@types/express": "^4.17.21",
+        "@types/jsonwebtoken": "^9.0.5",
+        "@types/module-alias": "^2.0.4",
+        "@types/node": "^20.5.1",
+        "@types/pg": "^8.15.5",
+        "cross-env": "^10.0.0",
+        "dotenv-cli": "^10.0.0",
+        "nodemon": "^3.0.1",
+        "supabase": "^2.39.2",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.1.6"
+    },
+    "_moduleAliases": {
+        "#config": "src/config",
+        "#controllers": "src/controllers",
+        "#models": "src/models",
+        "#routes": "src/routes",
+        "#middleware": "src/middleware",
+        "#utils": "src/utils",
+        "#jobs": "src/jobs"
+    }
+}
