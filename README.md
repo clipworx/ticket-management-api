@@ -15,7 +15,7 @@ Backend built with **Node.js + Express + node-cron** and **Supabase** as the dat
 
 ```bash
 git clone https://github.com/clipworx/ticket-management.git
-cd ticket-management/backend
+cd ticket-management
 npm install
 ```
 
