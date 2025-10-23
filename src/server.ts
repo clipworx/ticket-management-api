@@ -10,8 +10,16 @@ import { startTicketExpirationJob } from "#jobs/expiryChecker";
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+
+const corsAllowedOrigins = [
+  "http://localhost:3000",
+  "https://ticket-management-seven.vercel.app/"
+];
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: corsAllowedOrigins,
+}));
+
 app.use(express.json());
 
 import authRoutes from "#routes/auth";

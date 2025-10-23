@@ -4,8 +4,6 @@ dotenv.config();
 
 const supabaseUrl = process.env.SUPABASE_URL!;
 const supabaseKey = process.env.SUPABASE_ACCESS_TOKEN!;
-console.log("Using Supabase URL:", supabaseUrl);
-console.log("Using Supabase Service Role Key:", supabaseKey);
 
 const supabase = createClient(supabaseUrl, supabaseKey);
 
