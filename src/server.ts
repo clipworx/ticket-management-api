@@ -13,7 +13,8 @@ const PORT = process.env.PORT || 5000;
 
 const corsAllowedOrigins = [
   "http://localhost:3000",
-  "https://ticket-management-seven.vercel.app/"
+  "https://ticket-management-seven.vercel.app/",
+  "https://ticket-management-seven.vercel.app"
 ];
 // Middleware
 app.use(cors({
